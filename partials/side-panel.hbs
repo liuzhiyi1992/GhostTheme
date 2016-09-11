@@ -1,0 +1,49 @@
+<header class="panel-cover {{#if post}}panel-cover--collapsed{{/if}}" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        {{#if @blog.logo}}
+        <a href="{{@blog.url}}" title="前往 {{@blog.title}} 的主页"><img src="{{@blog.logo}}" width="80" alt="{{@blog.title}} logo" class="panel-cover__logo logo" /></a>
+        {{/if}}
+        <h1 class="panel-cover__title panel-title"><a href="{{@blog.url}}" title="前往 {{@blog.title}} 的主页">{{@blog.title}}</a></h1>
+        <br>
+	<br>
+	<span class="panel-cover__subtitle panel-subtitle">{{@blog.description}}</span>  
+        <hr class="panel-cover__divider" />
+	<br>
+        
+	<p class="panel-cover__description"><a href="https://github.com/liuzhiyi1992/MyshareBlogs">文章内容会同步更新在 我的Github Wiki 中，欢迎大家订阅支持！！ </a></p>
+
+<!--
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+-->
+
+	<div class="navigation-wrapper">
+          <div>
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="访问博客" class="blog-button">博客</a></li>
+              <li class="navigation__item"><a href="https://github.com/liuzhiyi1992" target="_blank" title="我的项目">项目</a></li>
+              <!-- <li class="navigation__item"><a href="zyden.vicp.cc" title="了解更多关于我">关于</a></li> -->
+              <li class="navigation__item"><a href="http://zyden.vicp.cc/rss-reader/" title="通过rss/邮件订阅本站">订阅</a></li>
+              <li class="navigation__item"><a href="http://vicp.us13.list-manage.com/subscribe?u=9c7df664aaa129b72fea203f4&id=880ce224bc" title="通过邮件订阅本站">邮件订阅</a></li>
+              <li class="navigation__item"><a href="http://zyden.vicp.cc/friendlylink/" title="">友情链接</a></li>
+            </ul>
+          </nav>
+          </div>
+          <div>
+          {{> social}}
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+<!--
+    <div class="panel-cover--overlay cover-touming"></div>
+-->
+  </div>
+</header>

@@ -1,0 +1,33 @@
+{{!< default}}
+
+{{#post}}
+
+  <article class="post-container post-container--single">
+
+    <header class="post-header">
+      <div class="post-meta">
+        <time datetime="{{date format="DD MMM YYYY"}}" class="post-meta__date date">{{date format="DD MMM YYYY"}}</time> &#8226; <span class="post-meta__tags tags">{{tags prefix="于 "}}</span>
+        <!--<span class="post-meta__author author"><img src="{{author.image}}" alt="profile image for {{author.name}}" class="avatar post-meta__avatar" /> by {{author.name}}</span>-->
+      </div>
+      <h1 class="post-title">{{{title}}}</h1>
+    </header>
+   
+<!-- 访问量统计 -->
+<div align="left", style="font-size:18px; color: #222222">Blog UV： 
+    <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3198893&c=9596992" 
+         alt="AmazingCounters.com" 
+         title="访问量"
+         style="vertical-align: middle;">
+</div>
+
+
+
+    <section class="{{post_class}}">
+      {{content}}
+    </section>
+
+  </article>
+
+  {{> comments}}
+
+{{/post}}
